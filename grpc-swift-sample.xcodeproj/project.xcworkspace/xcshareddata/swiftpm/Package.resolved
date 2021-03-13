@@ -14,9 +14,9 @@
         "package": "HelloGRPC",
         "repositoryURL": "https://github.com/takagisou/HelloGRPC",
         "state": {
-          "branch": "master",
-          "revision": "893486bf07051f03eafe8135a24bd2233d9c2e5d",
-          "version": null
+          "branch": null,
+          "revision": "fea0e1ee1cbe1ea202c7be8b9965492decab4eed",
+          "version": "0.0.1"
         }
       },
       {
