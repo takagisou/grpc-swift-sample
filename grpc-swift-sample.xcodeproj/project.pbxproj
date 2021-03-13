@@ -15,12 +15,14 @@
 		2640D41C25FBEF2900092145 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2640D41A25FBEF2900092145 /* LaunchScreen.storyboard */; };
 		2640D42725FBEF2900092145 /* grpc_swift_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640D42625FBEF2900092145 /* grpc_swift_sampleTests.swift */; };
 		2640D43225FBEF2900092145 /* grpc_swift_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640D43125FBEF2900092145 /* grpc_swift_sampleUITests.swift */; };
+		2640D44425FBEFB900092145 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 2640D44325FBEFB900092145 /* GRPC */; };
+		2640D44C25FBF8D200092145 /* helloworld.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640D44A25FBF8D200092145 /* helloworld.grpc.swift */; };
+		2640D44D25FBF8D200092145 /* helloworld.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640D44B25FBF8D200092145 /* helloworld.pb.swift */; };
 		2640D45E25FBF93C00092145 /* ClientDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640D45D25FBF93C00092145 /* ClientDataSource.swift */; };
 		2640D46425FBF99900092145 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2640D46325FBF99900092145 /* RxSwift */; };
 		2640D46625FBF99900092145 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2640D46525FBF99900092145 /* RxCocoa */; };
 		2640D46825FBF99900092145 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 2640D46725FBF99900092145 /* RxRelay */; };
 		2640D47A25FBFD9F00092145 /* HelloEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640D47925FBFD9F00092145 /* HelloEntity.swift */; };
-		2681EA2D25FCAFCE008E44F6 /* HelloGRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 2681EA2C25FCAFCE008E44F6 /* HelloGRPC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		2640D42D25FBEF2900092145 /* grpc-swift-sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "grpc-swift-sampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2640D43125FBEF2900092145 /* grpc_swift_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grpc_swift_sampleUITests.swift; sourceTree = "<group>"; };
 		2640D43325FBEF2900092145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2640D44A25FBF8D200092145 /* helloworld.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helloworld.grpc.swift; sourceTree = "<group>"; };
+		2640D44B25FBF8D200092145 /* helloworld.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helloworld.pb.swift; sourceTree = "<group>"; };
 		2640D45D25FBF93C00092145 /* ClientDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDataSource.swift; sourceTree = "<group>"; };
 		2640D47925FBFD9F00092145 /* HelloEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,8 +70,8 @@
 			files = (
 				2640D46625FBF99900092145 /* RxCocoa in Frameworks */,
 				2640D46425FBF99900092145 /* RxSwift in Frameworks */,
-				2681EA2D25FCAFCE008E44F6 /* HelloGRPC in Frameworks */,
 				2640D46825FBF99900092145 /* RxRelay in Frameworks */,
+				2640D44425FBEFB900092145 /* GRPC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +117,7 @@
 			children = (
 				2640D47E25FC060700092145 /* ui */,
 				2640D45225FBF91400092145 /* domain */,
+				2640D44825FBF8D200092145 /* grpc */,
 				2640D40F25FBEF2800092145 /* AppDelegate.swift */,
 				2640D41125FBEF2800092145 /* SceneDelegate.swift */,
 				2640D41825FBEF2900092145 /* Assets.xcassets */,
@@ -137,6 +142,23 @@
 				2640D43325FBEF2900092145 /* Info.plist */,
 			);
 			path = "grpc-swift-sampleUITests";
+			sourceTree = "<group>";
+		};
+		2640D44825FBF8D200092145 /* grpc */ = {
+			isa = PBXGroup;
+			children = (
+				2640D44925FBF8D200092145 /* proto */,
+			);
+			path = grpc;
+			sourceTree = "<group>";
+		};
+		2640D44925FBF8D200092145 /* proto */ = {
+			isa = PBXGroup;
+			children = (
+				2640D44A25FBF8D200092145 /* helloworld.grpc.swift */,
+				2640D44B25FBF8D200092145 /* helloworld.pb.swift */,
+			);
+			path = proto;
 			sourceTree = "<group>";
 		};
 		2640D45225FBF91400092145 /* domain */ = {
@@ -207,10 +229,10 @@
 			);
 			name = "grpc-swift-sample";
 			packageProductDependencies = (
+				2640D44325FBEFB900092145 /* GRPC */,
 				2640D46325FBF99900092145 /* RxSwift */,
 				2640D46525FBF99900092145 /* RxCocoa */,
 				2640D46725FBF99900092145 /* RxRelay */,
-				2681EA2C25FCAFCE008E44F6 /* HelloGRPC */,
 			);
 			productName = "grpc-swift-sample";
 			productReference = 2640D40C25FBEF2800092145 /* grpc-swift-sample.app */;
@@ -284,8 +306,8 @@
 			);
 			mainGroup = 2640D40325FBEF2800092145;
 			packageReferences = (
+				2640D44225FBEFB900092145 /* XCRemoteSwiftPackageReference "grpc-swift" */,
 				2640D46225FBF99900092145 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				2681EA2B25FCAFCE008E44F6 /* XCRemoteSwiftPackageReference "HelloGRPC" */,
 			);
 			productRefGroup = 2640D40D25FBEF2800092145 /* Products */;
 			projectDirPath = "";
@@ -334,7 +356,9 @@
 				2640D45E25FBF93C00092145 /* ClientDataSource.swift in Sources */,
 				2640D47A25FBFD9F00092145 /* HelloEntity.swift in Sources */,
 				2640D41025FBEF2800092145 /* AppDelegate.swift in Sources */,
+				2640D44C25FBF8D200092145 /* helloworld.grpc.swift in Sources */,
 				2640D41225FBEF2800092145 /* SceneDelegate.swift in Sources */,
+				2640D44D25FBF8D200092145 /* helloworld.pb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +693,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2640D44225FBEFB900092145 /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grpc/grpc-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		2640D46225FBF99900092145 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -677,17 +709,14 @@
 				minimumVersion = 6.1.0;
 			};
 		};
-		2681EA2B25FCAFCE008E44F6 /* XCRemoteSwiftPackageReference "HelloGRPC" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/takagisou/HelloGRPC";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2640D44325FBEFB900092145 /* GRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2640D44225FBEFB900092145 /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = GRPC;
+		};
 		2640D46325FBF99900092145 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2640D46225FBF99900092145 /* XCRemoteSwiftPackageReference "RxSwift" */;
@@ -702,11 +731,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2640D46225FBF99900092145 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
-		};
-		2681EA2C25FCAFCE008E44F6 /* HelloGRPC */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2681EA2B25FCAFCE008E44F6 /* XCRemoteSwiftPackageReference "HelloGRPC" */;
-			productName = HelloGRPC;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

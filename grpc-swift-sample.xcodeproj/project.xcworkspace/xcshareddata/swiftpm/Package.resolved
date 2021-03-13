@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "HelloGRPC",
-        "repositoryURL": "https://github.com/takagisou/HelloGRPC",
-        "state": {
-          "branch": "master",
-          "revision": "893486bf07051f03eafe8135a24bd2233d9c2e5d",
-          "version": null
-        }
-      },
-      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
         "state": {
