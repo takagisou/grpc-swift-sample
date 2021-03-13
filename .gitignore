@@ -92,6 +92,5 @@ iOSInjectionProject/
 
 
 # ignore proto
-proto
-grpc-swift-sample/grpc
+proto_files
 
