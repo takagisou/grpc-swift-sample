@@ -20,7 +20,7 @@
 		2640D46625FBF99900092145 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2640D46525FBF99900092145 /* RxCocoa */; };
 		2640D46825FBF99900092145 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 2640D46725FBF99900092145 /* RxRelay */; };
 		2640D47A25FBFD9F00092145 /* HelloEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640D47925FBFD9F00092145 /* HelloEntity.swift */; };
-		2681EA2D25FCAFCE008E44F6 /* HelloGRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 2681EA2C25FCAFCE008E44F6 /* HelloGRPC */; };
+		26C171AD25FD7ABC00544E91 /* HelloGRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 26C171AC25FD7ABC00544E91 /* HelloGRPC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +65,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2640D46625FBF99900092145 /* RxCocoa in Frameworks */,
+				26C171AD25FD7ABC00544E91 /* HelloGRPC in Frameworks */,
 				2640D46425FBF99900092145 /* RxSwift in Frameworks */,
-				2681EA2D25FCAFCE008E44F6 /* HelloGRPC in Frameworks */,
 				2640D46825FBF99900092145 /* RxRelay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +210,7 @@
 				2640D46325FBF99900092145 /* RxSwift */,
 				2640D46525FBF99900092145 /* RxCocoa */,
 				2640D46725FBF99900092145 /* RxRelay */,
-				2681EA2C25FCAFCE008E44F6 /* HelloGRPC */,
+				26C171AC25FD7ABC00544E91 /* HelloGRPC */,
 			);
 			productName = "grpc-swift-sample";
 			productReference = 2640D40C25FBEF2800092145 /* grpc-swift-sample.app */;
@@ -285,7 +285,7 @@
 			mainGroup = 2640D40325FBEF2800092145;
 			packageReferences = (
 				2640D46225FBF99900092145 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				2681EA2B25FCAFCE008E44F6 /* XCRemoteSwiftPackageReference "HelloGRPC" */,
+				26C171AB25FD7ABC00544E91 /* XCRemoteSwiftPackageReference "HelloGRPC" */,
 			);
 			productRefGroup = 2640D40D25FBEF2800092145 /* Products */;
 			projectDirPath = "";
@@ -677,12 +677,12 @@
 				minimumVersion = 6.1.0;
 			};
 		};
-		2681EA2B25FCAFCE008E44F6 /* XCRemoteSwiftPackageReference "HelloGRPC" */ = {
+		26C171AB25FD7ABC00544E91 /* XCRemoteSwiftPackageReference "HelloGRPC" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/takagisou/HelloGRPC";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -703,9 +703,9 @@
 			package = 2640D46225FBF99900092145 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
 		};
-		2681EA2C25FCAFCE008E44F6 /* HelloGRPC */ = {
+		26C171AC25FD7ABC00544E91 /* HelloGRPC */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2681EA2B25FCAFCE008E44F6 /* XCRemoteSwiftPackageReference "HelloGRPC" */;
+			package = 26C171AB25FD7ABC00544E91 /* XCRemoteSwiftPackageReference "HelloGRPC" */;
 			productName = HelloGRPC;
 		};
 /* End XCSwiftPackageProductDependency section */
