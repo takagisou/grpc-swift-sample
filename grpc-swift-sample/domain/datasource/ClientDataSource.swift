@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 import GRPC
-import NIO
+import HelloGRPC
 
 protocol ClientRepository {
     func hello(name: String) -> Single<HelloEntity>
